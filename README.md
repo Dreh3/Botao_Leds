@@ -14,7 +14,7 @@ __Os Componentes necessários para a simulação da atividade no Wokwi Integrado
 3) 03 Resistores de 330 Ω.
 4) Botão (Pushbutton).
 
-Os componentes acima já estão presente no kit de Desenvolvimento Bit Dog Lab.
+Os componentes acima já estão presentes no kit de Desenvolvimento Bit Dog Lab.
 
 __As funcionalidade básicas especificadas para a atividade são:__
 1) Ao pressionar o Botão todos os leds serão ligados e uma rotina de temporização será chamada após 3 segundos.
@@ -28,7 +28,7 @@ A atividade 1 utiliza temporizadores de um disparo para desligar os leds no temp
 ```bash
 add_alarm_in_ms(3000, turn_off_callback, NULL, false)
 ```
-Essa rotina é chamada sempre que o botão é acionado, determinando que a função 'turn_off_callback()' será executar em 3 segundos. Na função 'turn_off_callback()', visualizada abaixo, está toda a lógica para o desligamento ordenado dos leds. E para isso, a função  'add_alarm_in_ms(3000, turn_off_callback, NULL, false)' é chamada novamente duas vezes dentro da prórpia 'turn_off_callback()', permitindo que todos os leds sejam desligados ordenadamente no tempo desejado.
+Essa rotina é chamada sempre que o botão é acionado, determinando que a função 'turn_off_callback()' será executar em 3 segundos. Na função 'turn_off_callback()', visualizada abaixo, está toda a lógica para o desligamento ordenado dos leds. Na qual, a função  'add_alarm_in_ms(3000, turn_off_callback, NULL, false)' é chamada novamente duas vezes, permitindo que todos os leds sejam desligados ordenadamente no tempo desejado.
 ```bash
 int64_t turn_off_callback(alarm_id_t id, void *user_data)
 ```
@@ -37,7 +37,7 @@ __A simulação do projeto pode ser visualizada no seguinte link: [Simulação c
 
 ## Detalhamento do Funcionamento
 
-O presente código permite ligar 3 leds ao mesmo tempo após pressionar o Botão A. Para isso, o sistema verifica se ao pressionar o botão todos os leds estão desligados. Se sim, todos os leds são ligados e depois de 3 segundos o primeiro led é desligado. E assim, a cada 3 segundos um novo led é desligado. Por fim, com todos desligados, é possível ligá-los novamente ao pressionar o botão A (Botão esquerdo na placa).
+O presente código permite ligar 3 leds ao mesmo tempo após pressionar o Botão A e desligá-los automaticaente um a um a cada 3 segundos. Para isso, o sistema verifica se ao pressionar o botão todos os leds estão desligados. Se sim, todos os leds são ligados e depois de 3 segundos o primeiro led é desligado. E assim, a cada 3 segundos um novo led é desligado. Por fim, com todos desligados, é possível ligá-los novamente ao pressionar o botão A (Botão esquerdo na placa).
 
 ## Passos para uso do código
 
