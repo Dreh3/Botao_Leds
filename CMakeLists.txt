@@ -46,17 +46,16 @@ pico_enable_stdio_usb(botaoLeds 1)
 
 # Add the standard library to the build
 target_link_libraries(botaoLeds
-        pico_stdlib)
+        pico_stdlib
+        hardware_timer
+        )
 
 # Add the standard include files to the build
 target_include_directories(botaoLeds PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}
 )
 
-# Add any user requested libraries
-target_link_libraries(botaoLeds 
-        
-        )
+
 
 pico_add_extra_outputs(botaoLeds)
 
