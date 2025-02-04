@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = 'build/botaoLeds.uf2'
+elf = 'botaoLeds.elf'
