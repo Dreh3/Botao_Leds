@@ -62,5 +62,5 @@ Após os passos acima, o último passo necessário é abrir o arquivo diagram.js
 Todos os passos citados aplicam-se para carregar o código no ki de Desenvolvimento Bit Dog Lab. A única diferença é que o 4° passo não é essencial. Assim, após o passo 3, basta selecionar a opção 'Run' na barra inferior do VS Code para que o Semáforo passe a funcionar na placa.
 
 <div align="center">
-  <img src="https://github.com/Dreh3/Semaforo/blob/main/semaforoImagem.png?raw=true" alt="imagem do simulador" width="300"/>
+  <img src="https://github.com/Dreh3/Botao_Leds/blob/main/botaoLedsimagem.png?raw=true" alt="imagem do simulador" width="300"/>
 </div>
